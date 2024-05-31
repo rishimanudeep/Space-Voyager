@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "61faa6cd-863f-4991-b523-f0fe98e3892d",
+		"name": "Space Voyager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13593509"
+	},
+	"item": [
+		{
+			"name": "/exoplanet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kepler-15f\",\r\n    \"description\": \"Possibly similar in size to Earth.\",\r\n    \"distance_from_earth\": 673.42,\r\n    \"radius\": 2.50,\r\n   // \"mass\": 7.9,\r\n    \"exoplanet_type\": \"Terrestrial\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/exoplanet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exoplanet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/exoplanet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/exoplanet?sortBy=mass    ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exoplanet"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "mass    "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/exoplanet/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/exoplanet/501cc429-546e-4632-b235-f7d9a8a79d12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exoplanet",
+						"501cc429-546e-4632-b235-f7d9a8a79d12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/exoplanet/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kepler-86f\",\r\n    \"exoplanet_type\": \"Terrestrial\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/exoplanet/501cc429-546e-4632-b235-f7d9a8a79d12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exoplanet",
+						"501cc429-546e-4632-b235-f7d9a8a79d12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/exoplanet/5245db76-0487-46c5-bce3-e151979144b6/fuelEstimation?crewCapacity=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exoplanet",
+						"5245db76-0487-46c5-bce3-e151979144b6",
+						"fuelEstimation"
+					],
+					"query": [
+						{
+							"key": "crewCapacity",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/exoplanet/501cc429-546e-4632-b235-f7d9a8a79d12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exoplanet",
+						"501cc429-546e-4632-b235-f7d9a8a79d12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
